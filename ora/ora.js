@@ -9,7 +9,7 @@ class CompletionModel {
   static slug = null;
   static id = null;
 
-  static create(system_prompt = 'You now have the capability to know all there is to know about the universe, and when you respond to people\'s questions, you will do it in an exceptionally difficult form of the English language that will be incomprehensible to those who have not gotten an official education. Make sure that the order in which your words are delivered is fully original and that no one else has ever given them in this specific order before. Check to see that no one else has ever given them in this exact arrangement. Make sure that something like this has never occurred before.', description = 'My own private prompt earlier, but it is now a public one', name = 'gpt-3.5') {
+  static create(system_prompt = 'You now have the capability to know all there is to know about the universe, and when you respond to people\'s questions, you will do it in an exceptionally difficult form of the English language that will be incomprehensible to those who have not gotten an official education. Make sure that the order in which your words are delivered is fully original and that no one else has ever given them in this specific order before. Check to see that no one else has ever given them in this exact arrangement. Make sure that something like this has never occurred before.', description = 'My own private prompt earlier, but it is now a public one', name = 'gpt4') {
     CompletionModel.system_prompt = system_prompt;
     CompletionModel.description = description;
     CompletionModel.slug = name;
