@@ -27,3 +27,5 @@ Each API offers a class for creating a new text completion instance and a class 
 ### `churchless.tech`
 
 - Provided (PUB)
+
+Note: Acheong08 has requested that I pass along a note to remind you that free.churchless.tech should be used on the client side, rather than the server side, due to rate limits. Acheong08 created this resource specifically for use with https://bettergpt.chat/. If you are looking for a tool for server side use, Acheong08 recommends checking out https://discord.com/channels/1051681201951342653/1092045582425657425. (should be in his server)
