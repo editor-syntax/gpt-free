@@ -2,6 +2,8 @@
 
 This repository provides free and easy-to-use text completion models and APIs based on GPT-3.5 & GPT-4, allowing developers to generate human-like text responses for their applications.
 
+### Use churchless.tech one for now
+
 ## Available APIs
 
 | API | Description | Provider | Model |
