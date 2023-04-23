@@ -1,16 +1,30 @@
-const { CompletionModel, Completion } = require('./ora');
+const ora = require('./ora');
 
-async function run() {
-  // Create a new CompletionModel
-  await CompletionModel.create();
+async function main() {
+    const model = await ora.CompletionModel.create(
+        'You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible',
+        'ChatGPT Openai Language Model',
+        'gpt-3.5'
+    );
 
-  // Create a new completion for the model
-  const prompt = "What is the meaning of life?";
-  const conversationId = null;
-  const completion = await Completion.create(CompletionModel, prompt, conversationId);
+    const init = await ora.Completion.create(
+        model,
+        'hello world'
+    );
 
-  // Log the completion response
-  console.log(completion.completion.choices[0].text);
+    console.log(init.choices[0].text);
+
+    process.stdin.on('data', async (input) => {
+        const prompt = input.toString().trim();
+        const response = await ora.Completion.create(
+            model,
+            prompt,
+            true,
+            init.id
+        );
+
+        console.log(response.choices[0].text);
+    });
 }
 
-run();
+main();
